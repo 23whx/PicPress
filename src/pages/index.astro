@@ -1,0 +1,73 @@
+---
+import ControlsPanel from "@/components/ControlsPanel";
+import DropZone from "@/components/DropZone";
+import FileList from "@/components/FileList";
+import PreviewPane from "@/components/PreviewPane";
+import Toolbar from "@/components/Toolbar";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import "@/styles/global.css";
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PicPress - 免费在线批量图片压缩工具，支持 JPG、PNG、WebP、AVIF 格式，离线处理保护隐私" />
+    <title>PicPress - 批量图片压缩器</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>" />
+  </head>
+  <body class="min-h-screen bg-[var(--bg)] text-gray-800">
+    <!-- 头部 -->
+    <header class="sticky top-0 z-10 backdrop-blur-md bg-brand-bg/80 border-b border-gray-200">
+      <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">📸</span>
+          <h1 class="text-2xl font-medium">PicPress</h1>
+        </div>
+        <nav class="flex gap-3 items-center">
+          <LanguageSwitcher client:load />
+          <a
+            href="/about"
+            class="px-4 py-2 rounded-xl bg-brand-accent/50 hover:bg-brand-accent transition-colors"
+          >
+            关于
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="mx-auto max-w-7xl px-4 py-8">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- 左列：导入与列表 -->
+        <section class="space-y-6">
+          <DropZone client:load />
+          <FileList client:load />
+        </section>
+
+        <!-- 右列：参数与预览 -->
+        <section class="space-y-6">
+          <ControlsPanel client:load />
+          <PreviewPane client:load />
+          <Toolbar client:load />
+        </section>
+      </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="py-10 mt-20 text-center text-sm text-gray-600 border-t border-gray-200">
+      <p class="mb-2">© 2025 PicPress - 所有图片均在本地处理，保护您的隐私</p>
+      <div class="flex items-center justify-center gap-4 text-xs">
+        <a href="mailto:wanghongxiang23@gmail.com" class="hover:text-brand-accent transition-colors">
+          📧 wanghongxiang23@gmail.com
+        </a>
+        <span class="text-gray-400">|</span>
+        <a href="https://x.com/Rollkey4" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition-colors">
+          𝕏 @Rollkey4
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,140 @@
+---
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import "@/styles/global.css";
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="关于 PicPress - 了解我们的批量图片压缩工具" />
+    <title>关于 - PicPress</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>" />
+  </head>
+  <body class="min-h-screen bg-[var(--bg)] text-gray-800">
+    <!-- 头部 -->
+    <header class="sticky top-0 z-10 backdrop-blur-md bg-brand-bg/80 border-b border-gray-200">
+      <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">📸</span>
+          <a href="/" class="text-2xl font-medium hover:text-brand-accent transition-colors">PicPress</a>
+        </div>
+        <nav class="flex gap-3 items-center">
+          <LanguageSwitcher client:load />
+          <a
+            href="/about"
+            class="px-4 py-2 rounded-xl bg-brand-accent/50"
+          >
+            关于
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="mx-auto max-w-4xl px-4 py-12">
+      <div class="card rounded-2xl p-8 md:p-12 shadow-lg">
+        <h1 class="text-3xl font-bold mb-8 text-center">关于 PicPress</h1>
+
+        <div class="prose max-w-none space-y-6">
+          <!-- 项目介绍 -->
+          <section>
+            <h2 class="text-2xl font-semibold mb-4">🎯 项目简介</h2>
+            <p class="text-gray-700 leading-relaxed">
+              PicPress 是一个完全在本地运行的批量图片压缩工具。我们使用最新的 Web 技术（Web Worker、Canvas API）在您的浏览器中直接处理图片，无需上传到任何服务器，充分保护您的隐私。
+            </p>
+          </section>
+
+          <!-- 核心功能 -->
+          <section>
+            <h2 class="text-2xl font-semibold mb-4">✨ 核心功能</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700">
+              <li>支持 JPG、PNG、WebP、AVIF、GIF 等主流格式</li>
+              <li>批量上传、拖拽导入、粘贴剪贴板</li>
+              <li>灵活的压缩参数调节（质量、尺寸、格式）</li>
+              <li>实时预览原图与压缩后的对比</li>
+              <li>批量导出为 ZIP 文件</li>
+              <li>完全离线处理，保护隐私</li>
+            </ul>
+          </section>
+
+          <!-- 技术栈 -->
+          <section>
+            <h2 class="text-2xl font-semibold mb-4">🛠️ 技术栈</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>Astro</strong> - 现代化的静态站点框架</li>
+              <li><strong>React</strong> - 交互组件开发</li>
+              <li><strong>Tailwind CSS</strong> - 实用优先的样式框架</li>
+              <li><strong>TypeScript</strong> - 类型安全</li>
+              <li><strong>Web Worker</strong> - 后台处理，不阻塞 UI</li>
+              <li><strong>Zustand</strong> - 轻量级状态管理</li>
+            </ul>
+          </section>
+
+          <!-- 隐私保护 -->
+          <section>
+            <h2 class="text-2xl font-semibold mb-4">🔒 隐私保护</h2>
+            <p class="text-gray-700 leading-relaxed">
+              我们非常重视您的隐私。所有图片处理都在您的浏览器本地完成，不会上传到任何服务器。我们不收集、存储或分析您的图片数据。
+            </p>
+            <p class="text-gray-700 leading-relaxed mt-3">
+              请放心使用 PicPress 处理您的个人照片和敏感图片。
+            </p>
+          </section>
+
+          <!-- 开源信息 -->
+          <section>
+            <h2 class="text-2xl font-semibold mb-4">📜 开源协议</h2>
+            <p class="text-gray-700 leading-relaxed">
+              PicPress 是一个开源项目，采用 MIT 协议。我们鼓励社区贡献和改进。
+            </p>
+          </section>
+
+          <!-- 联系方式 -->
+          <section>
+            <h2 class="text-2xl font-semibold mb-4">📮 联系我们</h2>
+            <div class="space-y-3">
+              <p class="text-gray-700">
+                <strong>Email:</strong>
+                <a href="mailto:wanghongxiang23@gmail.com" class="ml-2 text-brand-accent hover:underline">
+                  wanghongxiang23@gmail.com
+                </a>
+              </p>
+              <p class="text-gray-700">
+                <strong>X (Twitter):</strong>
+                <a href="https://x.com/Rollkey4" target="_blank" rel="noopener noreferrer" class="ml-2 text-brand-accent hover:underline">
+                  @Rollkey4
+                </a>
+              </p>
+            </div>
+          </section>
+
+          <!-- 免责声明 -->
+          <section class="pt-6 border-t border-gray-200">
+            <h2 class="text-xl font-semibold mb-3">⚠️ 免责声明</h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              请确保您拥有上传和处理图片的合法权利。请勿上传受版权保护或违反法律的内容。PicPress 不对用户使用本工具产生的任何后果承担责任。
+            </p>
+          </section>
+        </div>
+
+        <!-- 返回按钮 -->
+        <div class="mt-10 text-center">
+          <a
+            href="/"
+            class="inline-block px-8 py-3 bg-brand-accent hover:bg-[#F48FB1] text-gray-800 font-medium rounded-xl transition-colors"
+          >
+            返回首页
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="py-10 text-center text-sm text-gray-600">
+      <p>© 2025 PicPress</p>
+    </footer>
+  </body>
+</html>
+

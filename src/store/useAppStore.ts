@@ -35,7 +35,7 @@ interface AppState {
   
   // 全局状态
   isProcessing: boolean;
-  isPaused: false;
+  isPaused: boolean;
   
   // 预览选中的任务
   selectedTaskId: string | null;

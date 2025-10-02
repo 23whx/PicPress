@@ -1,0 +1,33 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="#E8F5E9"/>
+  
+  <!-- Image Frame (Large) -->
+  <rect x="120" y="140" width="272" height="200" rx="16" fill="white" stroke="#F8BBD0" stroke-width="8"/>
+  
+  <!-- Image Mountains (Decorative) -->
+  <path d="M140 300 L180 240 L220 280 L260 220 L300 260 L340 240 L372 280 L372 320 L140 320 Z" fill="#C8E6C9"/>
+  
+  <!-- Sun (Decorative) -->
+  <circle cx="320" cy="190" r="20" fill="#FFE082"/>
+  
+  <!-- Compression Arrows (Center) -->
+  <g transform="translate(256, 256)">
+    <!-- Top Arrow -->
+    <path d="M 0 -60 L -20 -40 L -8 -40 L -8 -20 L 8 -20 L 8 -40 L 20 -40 Z" fill="#F48FB1"/>
+    
+    <!-- Bottom Arrow -->
+    <path d="M 0 60 L -20 40 L -8 40 L -8 20 L 8 20 L 8 40 L 20 40 Z" fill="#F48FB1"/>
+    
+    <!-- Center Line -->
+    <rect x="-60" y="-4" width="120" height="8" rx="4" fill="#66BB6A"/>
+  </g>
+  
+  <!-- Image Frame (Small) - Compressed Result -->
+  <g opacity="0.4">
+    <rect x="160" y="360" width="192" height="100" rx="12" fill="white" stroke="#66BB6A" stroke-width="6"/>
+    <path d="M175 430 L200 405 L225 425 L250 400 L275 420 L300 410 L337 440 L337 445 L175 445 Z" fill="#A5D6A7"/>
+    <circle cx="300" cy="385" r="12" fill="#FFE082"/>
+  </g>
+</svg>
+

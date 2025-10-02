@@ -8,7 +8,6 @@ import type { WorkerRequest, WorkerResponse } from '@/workers/compressor.worker'
 
 export default function Toolbar() {
   const tasks = useAppStore((state) => state.tasks);
-  const params = useAppStore((state) => state.params);
   const concurrency = useAppStore((state) => state.concurrency);
   const isProcessing = useAppStore((state) => state.isProcessing);
   const setIsProcessing = useAppStore((state) => state.setIsProcessing);
@@ -17,8 +16,6 @@ export default function Toolbar() {
   const clearCompleted = useAppStore((state) => state.clearCompleted);
   const clearTasks = useAppStore((state) => state.clearTasks);
   const t = useLanguageStore((state) => state.t);
-
-  const [workers, setWorkers] = useState<Worker[]>([]);
 
   // 统计
   const pendingCount = tasks.filter((t) => t.status === 'pending').length;
@@ -42,7 +39,6 @@ export default function Toolbar() {
       console.log(`✅ 创建 Worker ${i + 1}`);
       workerPool.push(worker);
     }
-    setWorkers(workerPool);
 
     // 待处理任务队列
     const queue = tasks.filter((t) => t.status === 'pending');
@@ -146,13 +142,12 @@ export default function Toolbar() {
       if (!stillProcessing && currentIndex >= queue.length) {
         console.log('🎉 所有任务完成');
         clearInterval(checkInterval);
-        setIsProcessing(false);
-        // 清理 Worker
-        workerPool.forEach((w) => w.terminate());
-        setWorkers([]);
-        // 清理所有进度定时器
-        progressIntervals.forEach((interval) => clearInterval(interval));
-        progressIntervals.clear();
+              setIsProcessing(false);
+              // 清理 Worker
+              workerPool.forEach((w) => w.terminate());
+              // 清理所有进度定时器
+              progressIntervals.forEach((interval) => clearInterval(interval));
+              progressIntervals.clear();
       }
     }, 500);
   };

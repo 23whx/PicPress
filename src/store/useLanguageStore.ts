@@ -10,14 +10,15 @@ interface LanguageState {
 
 // 从 localStorage 加载保存的语言
 function loadSavedLanguage(): Language {
-  if (typeof localStorage === 'undefined') return detectLanguage();
+  if (typeof localStorage === 'undefined') return 'en'; // 默认英语
   
   const saved = localStorage.getItem('picpress-language');
   if (saved && ['en', 'zh', 'ja', 'ko', 'ar'].includes(saved)) {
     return saved as Language;
   }
   
-  return detectLanguage();
+  // 首次访问默认英语
+  return 'en';
 }
 
 export const useLanguageStore = create<LanguageState>((set) => {

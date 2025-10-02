@@ -5,6 +5,12 @@ export interface Translations {
   appName: string;
   loading: string;
   
+  // 首页标题
+  hero: {
+    title: string;
+    subtitle: string;
+  };
+  
   // 导航
   nav: {
     settings: string;
@@ -174,6 +180,11 @@ export interface Translations {
 export const en: Translations = {
   appName: 'PicPress',
   loading: 'Loading...',
+  
+  hero: {
+    title: 'Free Online Batch Image Compressor',
+    subtitle: 'Compress JPG, PNG, WebP, AVIF images in batch. 100% free, offline processing, privacy protected. Fast, secure, and easy to use.',
+  },
   
   nav: {
     settings: 'Settings',
@@ -349,6 +360,11 @@ export const zh: Translations = {
   appName: 'PicPress',
   loading: '加载中...',
   
+  hero: {
+    title: '免费在线批量图片压缩器',
+    subtitle: '批量压缩 JPG、PNG、WebP、AVIF 图片。100% 免费，离线处理，隐私保护。快速、安全、易用。',
+  },
+  
   nav: {
     settings: '设置',
     about: '关于',
@@ -522,6 +538,11 @@ export const zh: Translations = {
 export const ja: Translations = {
   appName: 'PicPress',
   loading: '読み込み中...',
+  
+  hero: {
+    title: '無料オンライン一括画像圧縮ツール',
+    subtitle: 'JPG、PNG、WebP、AVIF画像を一括圧縮。100%無料、オフライン処理、プライバシー保護。高速、安全、簡単。',
+  },
   
   nav: {
     settings: '設定',
@@ -697,6 +718,11 @@ export const ko: Translations = {
   appName: 'PicPress',
   loading: '로딩 중...',
   
+  hero: {
+    title: '무료 온라인 일괄 이미지 압축기',
+    subtitle: 'JPG, PNG, WebP, AVIF 이미지를 일괄 압축하세요. 100% 무료, 오프라인 처리, 개인정보 보호. 빠르고 안전하며 사용하기 쉽습니다.',
+  },
+  
   nav: {
     settings: '설정',
     about: '정보',
@@ -870,6 +896,11 @@ export const ko: Translations = {
 export const ar: Translations = {
   appName: 'PicPress',
   loading: 'جاري التحميل...',
+  
+  hero: {
+    title: 'ضاغط صور مجاني على الإنترنت',
+    subtitle: 'ضغط صور JPG و PNG و WebP و AVIF دفعة واحدة. مجاني 100%، معالجة دون اتصال، حماية الخصوصية. سريع وآمن وسهل الاستخدام.',
+  },
   
   nav: {
     settings: 'الإعدادات',
@@ -1051,18 +1082,12 @@ export const translations: Record<Language, Translations> = {
 
 /**
  * 根据浏览器语言检测默认语言
+ * 注意：只在没有保存的语言设置时才进行检测
  */
 export function detectLanguage(): Language {
-  if (typeof navigator === 'undefined') return 'en';
-  
-  const browserLang = navigator.language.toLowerCase();
-  
-  if (browserLang.startsWith('zh')) return 'zh';
-  if (browserLang.startsWith('ja')) return 'ja';
-  if (browserLang.startsWith('ko')) return 'ko';
-  if (browserLang.startsWith('ar')) return 'ar';
-  
-  return 'en'; // 默认英语
+  // 默认英语，不自动检测浏览器语言
+  // 用户可以通过语言切换器手动选择
+  return 'en';
 }
 
 /**

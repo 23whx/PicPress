@@ -4,7 +4,8 @@ import DropZone from "@/components/DropZone";
 import FileList from "@/components/FileList";
 import PreviewPane from "@/components/PreviewPane";
 import Toolbar from "@/components/Toolbar";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
 import "@/styles/global.css";
 ---
 
@@ -39,7 +40,7 @@ import "@/styles/global.css";
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/icon-512.png" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
@@ -83,29 +84,14 @@ import "@/styles/global.css";
           <span class="text-3xl">📸</span>
           <h1 class="text-2xl font-medium">PicPress</h1>
         </div>
-        <nav class="flex gap-3 items-center">
-          <LanguageSwitcher client:load />
-          <a
-            href="/about"
-            class="px-4 py-2 rounded-xl bg-brand-accent/50 hover:bg-brand-accent transition-colors"
-          >
-            About
-          </a>
-        </nav>
+        <Navigation client:load />
       </div>
     </header>
 
     <!-- 主内容 -->
     <main class="mx-auto max-w-7xl px-4 py-8">
-      <!-- SEO Header -->
-      <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold mb-3 text-gray-800">
-          Free Online Batch Image Compressor
-        </h1>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Compress JPG, PNG, WebP, AVIF images in batch. 100% free, offline processing, privacy protected. Fast, secure, and easy to use.
-        </p>
-      </div>
+      <!-- Hero Section -->
+      <Hero client:load />
 
       <div class="grid lg:grid-cols-2 gap-6">
         <!-- 左列：导入与列表 -->

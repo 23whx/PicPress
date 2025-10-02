@@ -1,5 +1,5 @@
 ---
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Navigation from "@/components/Navigation";
 import "@/styles/global.css";
 ---
 
@@ -33,7 +33,7 @@ import "@/styles/global.css";
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/icon-512.png" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
@@ -46,15 +46,7 @@ import "@/styles/global.css";
           <span class="text-3xl">📸</span>
           <a href="/" class="text-2xl font-medium hover:text-brand-accent transition-colors">PicPress</a>
         </div>
-        <nav class="flex gap-3 items-center">
-          <LanguageSwitcher client:load />
-          <a
-            href="/about"
-            class="px-4 py-2 rounded-xl bg-brand-accent/50"
-          >
-            About
-          </a>
-        </nav>
+        <Navigation client:load />
       </div>
     </header>
 

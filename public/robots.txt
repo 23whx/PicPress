@@ -1,3 +1,18 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://picpress.app/sitemap.xml
+
+# Disallow crawling of API endpoints if any
+Disallow: /api/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+

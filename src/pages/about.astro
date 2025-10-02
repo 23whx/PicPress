@@ -4,13 +4,38 @@ import "@/styles/global.css";
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="关于 PicPress - 了解我们的批量图片压缩工具" />
-    <title>关于 - PicPress</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>About PicPress - Free Online Image Compressor Tool</title>
+    <meta name="title" content="About PicPress - Free Online Image Compressor" />
+    <meta name="description" content="Learn about PicPress, a free online batch image compression tool. Built with modern web technologies, 100% offline processing, privacy protected." />
+    <meta name="keywords" content="about picpress, image compressor, privacy, offline tool, open source, MIT license" />
+    <link rel="canonical" href="https://picpress.app/about" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://picpress.app/about" />
+    <meta property="og:title" content="About PicPress - Free Online Image Compressor" />
+    <meta property="og:description" content="Learn about PicPress, a free batch image compression tool with offline processing and privacy protection." />
+    <meta property="og:image" content="https://picpress.app/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://picpress.app/about" />
+    <meta property="twitter:title" content="About PicPress - Free Online Image Compressor" />
+    <meta property="twitter:description" content="Learn about PicPress, a free batch image compression tool with offline processing and privacy protection." />
+    <meta property="twitter:image" content="https://picpress.app/og-image.png" />
+    <meta name="twitter:creator" content="@Rollkey4" />
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body class="min-h-screen bg-[var(--bg)] text-gray-800">
     <!-- 头部 -->
@@ -26,7 +51,7 @@ import "@/styles/global.css";
             href="/about"
             class="px-4 py-2 rounded-xl bg-brand-accent/50"
           >
-            关于
+            About
           </a>
         </nav>
       </div>
@@ -35,65 +60,65 @@ import "@/styles/global.css";
     <!-- 主内容 -->
     <main class="mx-auto max-w-4xl px-4 py-12">
       <div class="card rounded-2xl p-8 md:p-12 shadow-lg">
-        <h1 class="text-3xl font-bold mb-8 text-center">关于 PicPress</h1>
+        <h1 class="text-3xl font-bold mb-8 text-center">About PicPress</h1>
 
         <div class="prose max-w-none space-y-6">
-          <!-- 项目介绍 -->
+          <!-- Project Introduction -->
           <section>
-            <h2 class="text-2xl font-semibold mb-4">🎯 项目简介</h2>
+            <h2 class="text-2xl font-semibold mb-4">🎯 Introduction</h2>
             <p class="text-gray-700 leading-relaxed">
-              PicPress 是一个完全在本地运行的批量图片压缩工具。我们使用最新的 Web 技术（Web Worker、Canvas API）在您的浏览器中直接处理图片，无需上传到任何服务器，充分保护您的隐私。
+              PicPress is a batch image compression tool that runs entirely locally. We use modern Web technologies (Web Worker, Canvas API) to process images directly in your browser without uploading to any server, fully protecting your privacy.
             </p>
           </section>
 
-          <!-- 核心功能 -->
+          <!-- Core Features -->
           <section>
-            <h2 class="text-2xl font-semibold mb-4">✨ 核心功能</h2>
+            <h2 class="text-2xl font-semibold mb-4">✨ Features</h2>
             <ul class="list-disc list-inside space-y-2 text-gray-700">
-              <li>支持 JPG、PNG、WebP、AVIF、GIF 等主流格式</li>
-              <li>批量上传、拖拽导入、粘贴剪贴板</li>
-              <li>灵活的压缩参数调节（质量、尺寸、格式）</li>
-              <li>实时预览原图与压缩后的对比</li>
-              <li>批量导出为 ZIP 文件</li>
-              <li>完全离线处理，保护隐私</li>
+              <li>Support JPG, PNG, WebP, AVIF, GIF formats</li>
+              <li>Batch upload, drag & drop, paste from clipboard</li>
+              <li>Flexible compression settings (quality, size, format)</li>
+              <li>Real-time preview comparison</li>
+              <li>Batch export as ZIP</li>
+              <li>Completely offline processing, privacy protected</li>
             </ul>
           </section>
 
-          <!-- 技术栈 -->
+          <!-- Tech Stack -->
           <section>
-            <h2 class="text-2xl font-semibold mb-4">🛠️ 技术栈</h2>
+            <h2 class="text-2xl font-semibold mb-4">🛠️ Tech Stack</h2>
             <ul class="list-disc list-inside space-y-2 text-gray-700">
-              <li><strong>Astro</strong> - 现代化的静态站点框架</li>
-              <li><strong>React</strong> - 交互组件开发</li>
-              <li><strong>Tailwind CSS</strong> - 实用优先的样式框架</li>
-              <li><strong>TypeScript</strong> - 类型安全</li>
-              <li><strong>Web Worker</strong> - 后台处理，不阻塞 UI</li>
-              <li><strong>Zustand</strong> - 轻量级状态管理</li>
+              <li><strong>Astro</strong> - Modern static site framework</li>
+              <li><strong>React</strong> - Interactive component development</li>
+              <li><strong>Tailwind CSS</strong> - Utility-first styling</li>
+              <li><strong>TypeScript</strong> - Type safety</li>
+              <li><strong>Web Worker</strong> - Background processing</li>
+              <li><strong>Zustand</strong> - Lightweight state management</li>
             </ul>
           </section>
 
-          <!-- 隐私保护 -->
+          <!-- Privacy Protection -->
           <section>
-            <h2 class="text-2xl font-semibold mb-4">🔒 隐私保护</h2>
+            <h2 class="text-2xl font-semibold mb-4">🔒 Privacy Protection</h2>
             <p class="text-gray-700 leading-relaxed">
-              我们非常重视您的隐私。所有图片处理都在您的浏览器本地完成，不会上传到任何服务器。我们不收集、存储或分析您的图片数据。
+              We take your privacy seriously. All image processing is done locally in your browser and never uploaded to any server. We do not collect, store, or analyze your image data.
             </p>
             <p class="text-gray-700 leading-relaxed mt-3">
-              请放心使用 PicPress 处理您的个人照片和敏感图片。
+              Feel free to use PicPress for personal photos and sensitive images.
             </p>
           </section>
 
-          <!-- 开源信息 -->
+          <!-- Open Source -->
           <section>
-            <h2 class="text-2xl font-semibold mb-4">📜 开源协议</h2>
+            <h2 class="text-2xl font-semibold mb-4">📜 License</h2>
             <p class="text-gray-700 leading-relaxed">
-              PicPress 是一个开源项目，采用 MIT 协议。我们鼓励社区贡献和改进。
+              PicPress is an open-source project under the MIT License. We encourage community contributions and improvements.
             </p>
           </section>
 
-          <!-- 联系方式 -->
+          <!-- Contact -->
           <section>
-            <h2 class="text-2xl font-semibold mb-4">📮 联系我们</h2>
+            <h2 class="text-2xl font-semibold mb-4">📮 Contact Us</h2>
             <div class="space-y-3">
               <p class="text-gray-700">
                 <strong>Email:</strong>
@@ -110,28 +135,28 @@ import "@/styles/global.css";
             </div>
           </section>
 
-          <!-- 免责声明 -->
+          <!-- Disclaimer -->
           <section class="pt-6 border-t border-gray-200">
-            <h2 class="text-xl font-semibold mb-3">⚠️ 免责声明</h2>
+            <h2 class="text-xl font-semibold mb-3">⚠️ Disclaimer</h2>
             <p class="text-gray-600 text-sm leading-relaxed">
-              请确保您拥有上传和处理图片的合法权利。请勿上传受版权保护或违反法律的内容。PicPress 不对用户使用本工具产生的任何后果承担责任。
+              Please ensure you have legal rights to upload and process images. Do not upload copyrighted or illegal content. PicPress is not responsible for any consequences arising from user actions.
             </p>
           </section>
         </div>
 
-        <!-- 返回按钮 -->
+        <!-- Back Button -->
         <div class="mt-10 text-center">
           <a
             href="/"
             class="inline-block px-8 py-3 bg-brand-accent hover:bg-[#F48FB1] text-gray-800 font-medium rounded-xl transition-colors"
           >
-            返回首页
+            Back to Home
           </a>
         </div>
       </div>
     </main>
 
-    <!-- 底部 -->
+    <!-- Footer -->
     <footer class="py-10 text-center text-sm text-gray-600">
       <p>© 2025 PicPress</p>
     </footer>

@@ -9,13 +9,70 @@ import "@/styles/global.css";
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="PicPress - 免费在线批量图片压缩工具，支持 JPG、PNG、WebP、AVIF 格式，离线处理保护隐私" />
-    <title>PicPress - 批量图片压缩器</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>PicPress - Free Online Batch Image Compressor | JPG PNG WebP AVIF</title>
+    <meta name="title" content="PicPress - Free Online Batch Image Compressor" />
+    <meta name="description" content="Compress images in batch for free! Support JPG, PNG, WebP, AVIF formats. 100% offline processing, your privacy is protected. Fast, secure, and easy to use." />
+    <meta name="keywords" content="image compressor, batch image compression, compress images, reduce image size, JPG compressor, PNG compressor, WebP, AVIF, online image optimizer, free image tool" />
+    <meta name="author" content="PicPress" />
+    <link rel="canonical" href="https://picpress.app/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://picpress.app/" />
+    <meta property="og:title" content="PicPress - Free Online Batch Image Compressor" />
+    <meta property="og:description" content="Compress images in batch for free! Support JPG, PNG, WebP, AVIF. 100% offline processing, privacy protected." />
+    <meta property="og:image" content="https://picpress.app/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://picpress.app/" />
+    <meta property="twitter:title" content="PicPress - Free Online Batch Image Compressor" />
+    <meta property="twitter:description" content="Compress images in batch for free! Support JPG, PNG, WebP, AVIF. 100% offline processing, privacy protected." />
+    <meta property="twitter:image" content="https://picpress.app/og-image.png" />
+    <meta name="twitter:creator" content="@Rollkey4" />
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PicPress",
+      "description": "Free online batch image compression tool. Supports JPG, PNG, WebP, AVIF formats with 100% offline processing.",
+      "url": "https://picpress.app",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Batch image compression",
+        "Support JPG, PNG, WebP, AVIF, GIF",
+        "Offline processing",
+        "Privacy protected",
+        "Real-time preview",
+        "ZIP export"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "PicPress Team",
+        "email": "wanghongxiang23@gmail.com"
+      }
+    }
+    </script>
   </head>
   <body class="min-h-screen bg-[var(--bg)] text-gray-800">
     <!-- 头部 -->
@@ -31,7 +88,7 @@ import "@/styles/global.css";
             href="/about"
             class="px-4 py-2 rounded-xl bg-brand-accent/50 hover:bg-brand-accent transition-colors"
           >
-            关于
+            About
           </a>
         </nav>
       </div>
@@ -39,6 +96,16 @@ import "@/styles/global.css";
 
     <!-- 主内容 -->
     <main class="mx-auto max-w-7xl px-4 py-8">
+      <!-- SEO Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-3 text-gray-800">
+          Free Online Batch Image Compressor
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Compress JPG, PNG, WebP, AVIF images in batch. 100% free, offline processing, privacy protected. Fast, secure, and easy to use.
+        </p>
+      </div>
+
       <div class="grid lg:grid-cols-2 gap-6">
         <!-- 左列：导入与列表 -->
         <section class="space-y-6">
